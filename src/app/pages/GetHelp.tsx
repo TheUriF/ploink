@@ -37,7 +37,7 @@ export function GetHelp() {
               </div>
               <div>
                 <div className="text-sm opacity-90">24/7 Emergency Hotline</div>
-                <div className="text-3xl font-bold">+1-800-ASKUNAI</div>
+                <div className="text-3xl font-bold">+1 (845) 720-4040</div>
               </div>
             </div>
             <div className="h-12 w-px bg-white/30 hidden md:block"></div>
@@ -89,7 +89,7 @@ export function GetHelp() {
               <p className="text-muted-foreground mb-4">
                 Call emergency services (911, 112, etc.) first, then contact us for coordinated support.
               </p>
-              <div className="text-sm font-semibold text-[#d4183d]">CALL: +1-800-ASKUNAI</div>
+              <div className="text-sm font-semibold text-[#d4183d]">CALL: +1 (845) 720-4040</div>
             </div>
 
             <div className="bg-background rounded-xl p-6 border border-border">
@@ -345,7 +345,7 @@ export function GetHelp() {
                 <div className="space-y-3 text-muted-foreground">
                   <div>
                     <div className="font-semibold text-foreground">24/7 Emergency Hotline</div>
-                    <div className="text-lg text-[#6FAF2F]">+1-800-ASKUNAI (275-8624)</div>
+                    <div className="text-lg text-[#6FAF2F]">+1 (845) 720-4040</div>
                   </div>
                   <div>
                     <div className="font-semibold text-foreground">International</div>
