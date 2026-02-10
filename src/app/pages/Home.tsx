@@ -54,8 +54,8 @@ export function Home() {
       image: 'volunteer elderly man',
     },
     {
-      name: 'Sarah Goldstein',
-      role: 'Medical Response Lead - Tel Aviv',
+      name: 'Shaya Shlez',
+      role: 'Medical Response Coordinator - Sullivan County',
       quote: 'Our network of volunteers spans continents, but our mission is singular: help those in crisis, no matter where they are.',
       image: 'volunteer medical professional woman',
     },
