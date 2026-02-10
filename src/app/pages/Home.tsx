@@ -60,8 +60,8 @@ export function Home() {
       image: 'volunteer medical professional woman',
     },
     {
-      name: 'Moshe Levy',
-      role: 'Community Organizer - London',
+      name: 'Yehuda Friedman',
+      role: 'Community Organizer - Mountaindale',
       quote: 'The speed of our response can mean the difference between tragedy and hope. We train to be ready.',
       image: 'volunteer community organizer man',
     },
