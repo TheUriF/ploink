@@ -48,8 +48,8 @@ export function Home() {
 
   const testimonials = [
     {
-      name: 'Rabbi David Cohen',
-      role: 'Emergency Coordinator - New York',
+      name: 'Manny Erps',
+      role: 'Emergency Coordinator - Jerusalem',
       quote: 'Being an askan means being there when people need you most. Every response we coordinate can change a life.',
       image: 'volunteer elderly man',
     },
