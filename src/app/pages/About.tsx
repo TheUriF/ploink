@@ -32,13 +32,13 @@ export function About() {
             <h2 className="text-4xl mb-6 text-center">Our Story</h2>
             <div className="space-y-6 text-lg text-muted-foreground">
               <p>
-                Askunai Ha'ir was founded on a simple yet powerful belief: in moments of crisis, coordinated action saves lives. What began as a small group of community organizers responding to local emergencies has grown into a global humanitarian network spanning 87 countries.
+                Askunai Ha'ir was founded by Sruly Pfeiffer on a simple yet powerful belief: in moments of crisis, coordinated action saves lives. What began as a small group of community organizers responding to local emergencies has grown into a global humanitarian network spanning 87 countries.
               </p>
               <p>
-                The name "Askunai Ha'ir" translates to "volunteer responders" or "helpers for those in need" — a title that captures the essence of our mission. We are askanim: community coordinators, organizers, and first responders who dedicate ourselves to serving others.
+                The name "Askunai Ha'ir" translates to "community activists," a title that captures the essence of our mission. We are askanim: community coordinators, organizers, and first responders who dedicate ourselves to serving others.
               </p>
               <p>
-                Today, our network includes over 15,000 trained volunteers ready to respond at a moment's notice. From natural disasters to medical emergencies, from family crises to community-wide challenges, we coordinate resources, deploy volunteers, and provide critical support when communities need it most.
+                Today, our network includes over 3,000 trained volunteers ready to respond at a moment's notice. From natural disasters to medical emergencies, from family crises to community-wide challenges, we coordinate resources, deploy volunteers, and provide critical support when communities need it most.
               </p>
               <p>
                 Our strength lies not in any single individual, but in our coordinated network. When crisis strikes anywhere in the world, our askanim activate a web of resources, expertise, and compassionate action that can make the difference between tragedy and hope.
@@ -61,13 +61,13 @@ export function About() {
 
             <div className="space-y-6 text-lg text-muted-foreground">
               <p>
-                An <span className="text-foreground font-semibold">askan</span> (plural: askanim) is more than a volunteer — they are community coordinators who take personal responsibility for ensuring help reaches those who need it. Askanim serve as the vital link between crisis and response.
+                An <span className="text-foreground font-semibold">askan</span> (plural: askunim) is more than a volunteer — they are community coordinators who take personal responsibility for ensuring help reaches those who need it. Askunim serve as the vital link between crisis and response.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-background rounded-xl p-6 border border-border">
                   <h3 className="text-[#6FAF2F] mb-3">24/7 Coordination</h3>
-                  <p>Askanim maintain round-the-clock availability to receive emergency calls and coordinate immediate response.</p>
+                  <p>Askunim maintain round-the-clock availability to receive emergency calls and coordinate immediate response.</p>
                 </div>
                 <div className="bg-background rounded-xl p-6 border border-border">
                   <h3 className="text-[#4A86C5] mb-3">Resource Mobilization</h3>
@@ -75,16 +75,16 @@ export function About() {
                 </div>
                 <div className="bg-background rounded-xl p-6 border border-border">
                   <h3 className="text-[#9FD36B] mb-3">Local Expertise</h3>
-                  <p>Operating within their communities, askanim understand local needs, customs, and resources intimately.</p>
+                  <p>Operating within their communities, askunim understand local needs, customs, and resources intimately.</p>
                 </div>
                 <div className="bg-background rounded-xl p-6 border border-border">
                   <h3 className="text-[#6FAF2F] mb-3">Compassionate Leadership</h3>
-                  <p>Beyond logistics, askanim provide emotional support and guidance during the most difficult moments.</p>
+                  <p>Beyond logistics, askunim provide emotional support and guidance during the most difficult moments.</p>
                 </div>
               </div>
 
               <p>
-                Our askanim come from all walks of life — medical professionals, logistics experts, counselors, emergency responders, and community leaders. What unites them is an unwavering commitment to service and the skills to coordinate effective, compassionate responses under pressure.
+                Our askunim come from all walks of life — medical professionals, logistics experts, counselors, emergency responders, and community leaders. What unites them is an unwavering commitment to service and the skills to coordinate effective, compassionate responses under pressure.
               </p>
             </div>
           </div>
@@ -134,7 +134,7 @@ export function About() {
                     </div>
                     <div>
                       <div className="font-semibold text-foreground mb-1">Community Coordinators</div>
-                      <div>Askanim on the ground managing local volunteer networks and responses</div>
+                      <div>Askunim on the ground managing local volunteer networks and responses</div>
                     </div>
                   </div>
                 </div>
