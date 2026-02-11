@@ -99,12 +99,12 @@ export function Home() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 py-20 text-center relative z-10">
+        <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20 text-center relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl md:text-6xl lg:text-7xl mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 sm:mb-6 leading-tight"
           >
             Coordinating Help
             <br />
@@ -114,7 +114,7 @@ export function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-10"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 sm:mb-10 px-4"
           >
             A global volunteer network providing rapid response and humanitarian support across communities worldwide.
           </motion.p>
@@ -122,17 +122,17 @@ export function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4"
           >
             <button
               onClick={() => navigate('/get-help')}
-              className="bg-[#6FAF2F] hover:bg-[#5e9527] text-white px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              className="bg-[#6FAF2F] hover:bg-[#5e9527] active:bg-[#5e9527] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg text-base sm:text-lg touch-manipulation"
             >
               Get Help Now
             </button>
             <button
               onClick={() => navigate('/apply')}
-              className="bg-[#4A86C5] hover:bg-[#3a6ba0] text-white px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+              className="bg-[#4A86C5] hover:bg-[#3a6ba0] active:bg-[#3a6ba0] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg text-base sm:text-lg touch-manipulation"
             >
               Become a Volunteer
             </button>
@@ -141,20 +141,20 @@ export function Home() {
       </section>
 
       {/* Mission Strip */}
-      <section className="py-12 bg-muted">
+      <section className="py-8 sm:py-12 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-background rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
+              className="bg-background rounded-xl p-5 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
             >
-              <div className="w-16 h-16 bg-[#6FAF2F]/10 rounded-full flex items-center justify-center mb-4">
-                <Globe className="h-8 w-8 text-[#6FAF2F]" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#6FAF2F]/10 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                <Globe className="h-7 w-7 sm:h-8 sm:w-8 text-[#6FAF2F]" />
               </div>
-              <h3 className="mb-2">Global Reach</h3>
-              <p className="text-muted-foreground">
+              <h3 className="mb-2 text-lg sm:text-xl">Global Reach</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
                 Operating in 87 countries with coordinated response teams ready 24/7
               </p>
             </motion.div>
@@ -164,13 +164,13 @@ export function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-background rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
+              className="bg-background rounded-xl p-5 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
             >
-              <div className="w-16 h-16 bg-[#4A86C5]/10 rounded-full flex items-center justify-center mb-4">
-                <Zap className="h-8 w-8 text-[#4A86C5]" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#4A86C5]/10 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                <Zap className="h-7 w-7 sm:h-8 sm:w-8 text-[#4A86C5]" />
               </div>
-              <h3 className="mb-2">Rapid Response</h3>
-              <p className="text-muted-foreground">
+              <h3 className="mb-2 text-lg sm:text-xl">Rapid Response</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
                 Emergency coordination within minutes, deployment within hours
               </p>
             </motion.div>
@@ -180,13 +180,13 @@ export function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-background rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
+              className="bg-background rounded-xl p-5 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
             >
-              <div className="w-16 h-16 bg-[#9FD36B]/10 rounded-full flex items-center justify-center mb-4">
-                <Heart className="h-8 w-8 text-[#9FD36B]" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#9FD36B]/10 rounded-full flex items-center justify-center mb-3 sm:mb-4">
+                <Heart className="h-7 w-7 sm:h-8 sm:w-8 text-[#9FD36B]" />
               </div>
-              <h3 className="mb-2">Community Support</h3>
-              <p className="text-muted-foreground">
+              <h3 className="mb-2 text-lg sm:text-xl">Community Support</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
                 Led by askanim dedicated to serving their communities with compassion
               </p>
             </motion.div>
@@ -195,16 +195,16 @@ export function Home() {
       </section>
 
       {/* What We Do */}
-      <section className="py-20">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl mb-4">What We Do</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4">What We Do</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               Comprehensive humanitarian coordination across multiple domains
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -272,26 +272,26 @@ export function Home() {
       </section>
 
       {/* Impact Section */}
-      <section className="py-20 bg-gradient-to-br from-[#6FAF2F]/10 via-background to-[#4A86C5]/10">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[#6FAF2F]/10 via-background to-[#4A86C5]/10">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl mb-4">Our Global Impact</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4">Our Global Impact</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground px-4">
               Numbers that represent real lives touched and communities strengthened
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="text-center"
             >
-              <div className="text-5xl md:text-6xl text-[#6FAF2F] mb-2">
+              <div className="text-4xl sm:text-5xl md:text-6xl text-[#6FAF2F] mb-2">
                 {stats.countries}
               </div>
-              <div className="text-lg text-muted-foreground">Countries Served</div>
+              <div className="text-sm sm:text-base md:text-lg text-muted-foreground px-2">Countries Served</div>
             </motion.div>
 
             <motion.div
@@ -301,10 +301,10 @@ export function Home() {
               transition={{ delay: 0.1 }}
               className="text-center"
             >
-              <div className="text-5xl md:text-6xl text-[#4A86C5] mb-2">
+              <div className="text-4xl sm:text-5xl md:text-6xl text-[#4A86C5] mb-2">
                 {stats.volunteers.toLocaleString()}+
               </div>
-              <div className="text-lg text-muted-foreground">Active Volunteers</div>
+              <div className="text-sm sm:text-base md:text-lg text-muted-foreground px-2">Active Volunteers</div>
             </motion.div>
 
             <motion.div
@@ -314,10 +314,10 @@ export function Home() {
               transition={{ delay: 0.2 }}
               className="text-center"
             >
-              <div className="text-5xl md:text-6xl text-[#9FD36B] mb-2">
+              <div className="text-4xl sm:text-5xl md:text-6xl text-[#9FD36B] mb-2">
                 {stats.emergencies.toLocaleString()}+
               </div>
-              <div className="text-lg text-muted-foreground">Emergencies Responded To</div>
+              <div className="text-sm sm:text-base md:text-lg text-muted-foreground px-2">Emergencies Responded To</div>
             </motion.div>
 
             <motion.div
@@ -327,21 +327,21 @@ export function Home() {
               transition={{ delay: 0.3 }}
               className="text-center"
             >
-              <div className="text-5xl md:text-6xl text-[#6FAF2F] mb-2">
+              <div className="text-4xl sm:text-5xl md:text-6xl text-[#6FAF2F] mb-2">
                 {stats.lives.toLocaleString()}+
               </div>
-              <div className="text-lg text-muted-foreground">Lives Helped</div>
+              <div className="text-sm sm:text-base md:text-lg text-muted-foreground px-2">Lives Helped</div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Askanim Spotlight */}
-      <section className="py-20">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl mb-4">Voices from the Field</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4">Voices from the Field</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground px-4">
               Meet the askanim coordinating help around the world
             </p>
           </div>
@@ -352,34 +352,34 @@ export function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="bg-background rounded-2xl shadow-xl p-8 md:p-12 border border-border"
+              className="bg-background rounded-2xl shadow-xl p-6 sm:p-8 md:p-12 border border-border"
             >
-              <div className="flex flex-col md:flex-row gap-6 items-center">
+              <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-center">
                 <div className="flex-shrink-0">
-                  <div className="w-24 h-24 bg-gradient-to-br from-[#6FAF2F] to-[#4A86C5] rounded-full flex items-center justify-center">
-                    <Users className="h-12 w-12 text-white" />
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-[#6FAF2F] to-[#4A86C5] rounded-full flex items-center justify-center">
+                    <Users className="h-10 w-10 sm:h-12 sm:w-12 text-white" />
                   </div>
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <p className="text-xl italic mb-6 text-foreground">
+                  <p className="text-base sm:text-lg md:text-xl italic mb-4 sm:mb-6 text-foreground">
                     "{testimonials[currentTestimonial].quote}"
                   </p>
                   <div>
-                    <div className="font-semibold text-lg">{testimonials[currentTestimonial].name}</div>
-                    <div className="text-muted-foreground">{testimonials[currentTestimonial].role}</div>
+                    <div className="font-semibold text-base sm:text-lg">{testimonials[currentTestimonial].name}</div>
+                    <div className="text-sm sm:text-base text-muted-foreground">{testimonials[currentTestimonial].role}</div>
                   </div>
                 </div>
               </div>
 
-              <div className="flex justify-center gap-2 mt-8">
+              <div className="flex justify-center gap-2 mt-6 sm:mt-8">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`h-3 rounded-full transition-all duration-300 touch-manipulation ${
                       index === currentTestimonial
                         ? 'bg-[#6FAF2F] w-8'
-                        : 'bg-muted hover:bg-muted-foreground'
+                        : 'bg-muted hover:bg-muted-foreground w-3'
                     }`}
                     aria-label={`Go to testimonial ${index + 1}`}
                   />
@@ -391,20 +391,20 @@ export function Home() {
       </section>
 
       {/* Donation CTA */}
-      <section className="py-20 bg-gradient-to-r from-[#6FAF2F] to-[#5e9527]">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-[#6FAF2F] to-[#5e9527]">
         <div className="container mx-auto px-4 text-center text-white">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl mb-6">Your Support Saves Time — And Time Saves Lives</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto opacity-95">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 px-4">Your Support Saves Time — And Time Saves Lives</h2>
+            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto opacity-95 px-4">
               Every donation helps us maintain our rapid response network and deploy volunteers where they're needed most.
             </p>
             <button
               onClick={() => navigate('/donate')}
-              className="bg-white text-[#6FAF2F] px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-white text-[#6FAF2F] px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl text-base sm:text-lg touch-manipulation"
             >
               Donate Now
             </button>
