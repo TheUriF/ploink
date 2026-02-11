@@ -17,48 +17,48 @@ export function GlobalOperations() {
   const regions: Record<string, Region> = {
     'North America': {
       name: 'North America',
-      coordinator: 'Rabbi Michael Goldstein',
-      volunteers: 4200,
+      coordinator: 'Michel Chavez',
+      volunteers: 1300,
       languages: ['English', 'Spanish', 'French'],
-      activeOps: 23,
+      activeOps: 920,
       contact: 'northamerica@askunaihair.org'
     },
     'Europe': {
       name: 'Europe',
       coordinator: 'Sarah Levine',
-      volunteers: 3800,
+      volunteers: 640,
       languages: ['English', 'French', 'German', 'Russian', 'Italian'],
-      activeOps: 31,
+      activeOps: 440,
       contact: 'europe@askunaihair.org'
     },
     'Middle East': {
       name: 'Middle East',
       coordinator: 'David Ben-Ami',
-      volunteers: 2900,
+      volunteers: 709,
       languages: ['Hebrew', 'Arabic', 'English'],
-      activeOps: 18,
+      activeOps: 503,
       contact: 'middleeast@askunaihair.org'
     },
     'Asia Pacific': {
       name: 'Asia Pacific',
       coordinator: 'Dr. Rachel Chen',
-      volunteers: 2100,
+      volunteers: 300,
       languages: ['English', 'Mandarin', 'Japanese', 'Hindi'],
-      activeOps: 14,
+      activeOps: 290,
       contact: 'asiapacific@askunaihair.org'
     },
     'Latin America': {
       name: 'Latin America',
       coordinator: 'Carlos Martinez',
-      volunteers: 1600,
+      volunteers: 205,
       languages: ['Spanish', 'Portuguese', 'English'],
-      activeOps: 12,
+      activeOps: 130,
       contact: 'latinamerica@askunaihair.org'
     },
     'Africa': {
       name: 'Africa',
       coordinator: 'Dr. Miriam Adeyemi',
-      volunteers: 820,
+      volunteers: 46,
       languages: ['English', 'French', 'Swahili', 'Arabic'],
       activeOps: 9,
       contact: 'africa@askunaihair.org'
@@ -97,7 +97,7 @@ export function GlobalOperations() {
               <div className="text-muted-foreground">Countries</div>
             </div>
             <div className="bg-background rounded-xl p-6 text-center shadow-md">
-              <div className="text-4xl font-bold text-[#4A86C5] mb-2">15,420</div>
+              <div className="text-4xl font-bold text-[#4A86C5] mb-2">3,200</div>
               <div className="text-muted-foreground">Volunteers</div>
             </div>
             <div className="bg-background rounded-xl p-6 text-center shadow-md">
