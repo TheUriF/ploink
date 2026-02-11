@@ -15,8 +15,8 @@ export function Home() {
   useEffect(() => {
     const targetStats = {
       countries: 87,
-      volunteers: 15420,
-      emergencies: 3200,
+      volunteers: 3200,
+      emergencies: 15420,
       lives: 48000,
     };
 
