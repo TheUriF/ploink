@@ -289,7 +289,7 @@ export function Home() {
               className="text-center"
             >
               <div className="text-5xl md:text-6xl text-[#6FAF2F] mb-2">
-                {stats.countries}+
+                {stats.countries}
               </div>
               <div className="text-lg text-muted-foreground">Countries Served</div>
             </motion.div>
