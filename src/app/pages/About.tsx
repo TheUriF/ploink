@@ -35,13 +35,13 @@ export function About() {
                 Askunai Ha'ir was founded by Sruly Pfeiffer on a simple yet powerful belief: in moments of crisis, coordinated action saves lives. What began as a small group of community organizers responding to local emergencies has grown into a global humanitarian network spanning 87 countries.
               </p>
               <p>
-                The name "Askunai Ha'ir" translates to "community activists," a title that captures the essence of our mission. We are askanim: community coordinators, organizers, and first responders who dedicate ourselves to serving others.
+                The name "Askunai Ha'ir" translates to "community activists," a title that captures the essence of our mission. We are askunim: community coordinators, organizers, and first responders who dedicate ourselves to serving others.
               </p>
               <p>
                 Today, our network includes over 3,000 trained volunteers ready to respond at a moment's notice. From natural disasters to medical emergencies, from family crises to community-wide challenges, we coordinate resources, deploy volunteers, and provide critical support when communities need it most.
               </p>
               <p>
-                Our strength lies not in any single individual, but in our coordinated network. When crisis strikes anywhere in the world, our askanim activate a web of resources, expertise, and compassionate action that can make the difference between tragedy and hope.
+                Our strength lies not in any single individual, but in our coordinated network. When crisis strikes anywhere in the world, our askunim activate a web of resources, expertise, and compassionate action that can make the difference between tragedy and hope.
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export function About() {
               <div className="w-16 h-16 bg-[#6FAF2F] rounded-full flex items-center justify-center">
                 <Users className="h-8 w-8 text-white" />
               </div>
-              <h2 className="text-4xl">The Role of Askanim</h2>
+              <h2 className="text-4xl">The Role of Askunim</h2>
             </div>
 
             <div className="space-y-6 text-lg text-muted-foreground">
