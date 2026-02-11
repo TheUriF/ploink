@@ -39,14 +39,14 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="Askunai Ha'ir" className="h-14 w-14" />
+        <div className="flex h-16 sm:h-20 items-center justify-between">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3">
+            <img src={logo} alt="Askunai Ha'ir" className="h-10 w-10 sm:h-14 sm:w-14" />
             <div className="flex flex-col">
-              <span className="font-semibold text-lg text-[#6FAF2F]">
+              <span className="font-semibold text-base sm:text-lg text-[#6FAF2F]">
                 Askunai Ha'ir
               </span>
-              <span className="text-xs text-muted-foreground">
+              <span className="text-xs text-muted-foreground hidden xs:block">
                 Coordinating When It Counts
               </span>
             </div>
@@ -99,17 +99,17 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-border">
-            <div className="flex flex-col gap-2">
+          <nav className="lg:hidden py-4 border-t border-border animate-in slide-in-from-top-2 duration-200">
+            <div className="flex flex-col gap-2 max-h-[calc(100vh-5rem)] overflow-y-auto">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-4 py-3 rounded-lg transition-colors ${
+                  className={`px-4 py-3 rounded-lg transition-colors text-base ${
                     location.pathname === link.path
                       ? 'bg-[#6FAF2F] text-white'
-                      : 'text-foreground hover:bg-muted'
+                      : 'text-foreground hover:bg-muted active:bg-muted/80'
                   }`}
                 >
                   {link.label}
