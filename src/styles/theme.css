@@ -178,4 +178,31 @@
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
   }
+  
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    /* Prevent text size adjustments on iOS */
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+  }
+
+  /* Ensure smooth scrolling on mobile */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Better touch targets for mobile */
+  @media (pointer: coarse) {
+    button,
+    a,
+    input,
+    select,
+    textarea {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
 }
