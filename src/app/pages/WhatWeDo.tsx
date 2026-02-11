@@ -136,7 +136,7 @@ export function WhatWeDo() {
               </div>
               <div className="space-y-4 text-lg text-muted-foreground">
                 <p>
-                  Our global network of 15,000+ volunteers represents diverse skills and expertise. Coordinating this distributed workforce requires sophisticated systems and experienced askanim.
+                  Our global network of 3,000+ volunteers represents diverse skills and expertise. Coordinating this distributed workforce requires sophisticated systems and experienced askanim.
                 </p>
                 <p>
                   We maintain detailed volunteer profiles including:
