@@ -46,7 +46,7 @@ export function Header() {
               <span className="font-semibold text-base sm:text-lg text-[#6FAF2F]">
                 Askunai Ha'ir
               </span>
-              <span className="text-xs text-muted-foreground hidden xs:block">
+              <span className="text-xs text-muted-foreground hidden sm:block">
                 Coordinating When It Counts
               </span>
             </div>
