@@ -99,7 +99,7 @@ export function WhatWeDo() {
                     3
                   </div>
                   <div>
-                    <div className="font-semibold mb-1">Volunteer Activation</div>
+                    <div className="font-semibold mb-1">Resource Activation</div>
                     <div className="text-muted-foreground">Nearest qualified volunteers notified and deployed</div>
                   </div>
                 </div>
@@ -118,6 +118,100 @@ export function WhatWeDo() {
         </div>
       </section>
 
+      {/* Emergency Medical Response */}
+      <section className="py-12 sm:py-16 md:py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-last lg:order-first"
+            >
+              <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#9FD36B] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl">Emergency Medical Response</h2>
+              </div>
+              <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-muted-foreground">
+                <p>
+                  When medical emergencies occur, our network of healthcare professionals and first responders springs into action. We coordinate with local emergency services while providing additional support.
+                </p>
+                <p>
+                  Key components include:
+                </p>
+                <ul className="space-y-3 ml-6">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#9FD36B] rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Rapid deployment of medical volunteers</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#9FD36B] rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Medical supply coordination and delivery</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#9FD36B] rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Family support during medical crises</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-[#9FD36B] rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Follow-up care coordination</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-[#9FD36B]/10 to-transparent rounded-2xl p-4 sm:p-6 md:p-8 border border-border"
+            >
+              <h3 className="text-xl sm:text-2xl mb-4 sm:mb-6">Medical Response Features</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-[#9FD36B] text-white rounded-full flex items-center justify-center flex-shrink-0">
+                    1
+                  </div>
+                  <div>
+                    <div className="font-semibold mb-1">Immediate Assessment</div>
+                    <div className="text-muted-foreground">Evaluate medical needs and urgency</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-[#9FD36B] text-white rounded-full flex items-center justify-center flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <div className="font-semibold mb-1">Professional Dispatch</div>
+                    <div className="text-muted-foreground">Connect with certified medical volunteers</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-[#9FD36B] text-white rounded-full flex items-center justify-center flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <div className="font-semibold mb-1">Supply Coordination</div>
+                    <div className="text-muted-foreground">Deliver necessary medical equipment</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-[#9FD36B] text-white rounded-full flex items-center justify-center flex-shrink-0">
+                    4
+                  </div>
+                  <div>
+                    <div className="font-semibold mb-1">Ongoing Support</div>
+                    <div className="text-muted-foreground">Provide follow-up care and resources</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
       {/* Field Volunteer Coordination */}
       <section className="py-12 sm:py-16 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
