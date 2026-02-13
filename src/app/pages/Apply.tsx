@@ -199,7 +199,7 @@ export function Apply() {
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-[#6FAF2F] rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Be an admin on 17+ Whatsapp groups</span>
+                    <span>Be an admin on 17 or more Whatsapp groups</span>
                   </li>
                 </ul>
               </div>
@@ -338,7 +338,7 @@ export function Apply() {
                         type="tel"
                         {...register('phone', { required: 'Phone number is required' })}
                         className="w-full x-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border bg-input-background focus:outline-none focus:ring-2 focus:ring-[#6FAF2F]"
-                        placeholder="+18454347724"
+                        placeholder=" +18454347724"
                       />
                       {errors.phone && <p className="text-[#d4183d] text-sm mt-1">{errors.phone.message}</p>}
                     </div>
