@@ -65,11 +65,11 @@ export async function onRequestPost(context) {
         ">
           
           <h2 style="margin-top:0; color:#222;">
-            New Website Submission
+            New Application Submitted
           </h2>
 
           <p style="color:#555;">
-            A new form submission was received.
+            A new application was received.
           </p>
 
           <table style="
