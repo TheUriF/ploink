@@ -65,6 +65,12 @@ export function Home() {
       quote: 'The speed of our response can mean the difference between tragedy and hope. We train to be ready.',
       image: 'volunteer community organizer man',
     },
+    {
+      name: 'Avraham Israel',
+      role: 'Former Senior Web Developer',
+      quote: 'Working in this organization means putting public safety and PR opportunities first - before your own life or the the lives of those you love',
+      image: 'volunteer community organizer man',
+    },
   ];
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
