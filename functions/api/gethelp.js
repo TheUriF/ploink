@@ -73,7 +73,7 @@ export async function onRequestPost(context) {
         <div style="max-width:600px;margin:auto;background:white;padding:25px;border-radius:8px;">
           <h2 style="margin-top:0;">We Received Your Request</h2>
 
-          <p>Hi ${escapeHtml(data.firstName || "")},</p>
+          <p>Hi ${escapeHtml(data.name || "")},</p>
 
           <p>
             We’ve received your request and will reach out shortly.
@@ -96,7 +96,7 @@ export async function onRequestPost(context) {
     `;
 
     const applicantText = `
-Hi ${data.firstName || ""},
+Hi ${data.name || ""},
 
 We’ve received your request and will respond shortly.
 
@@ -127,7 +127,7 @@ Askunai Ha'ir Coordinators
     const adminResponse = await sendEmail({
       to: ["dispatch@askunaihair.org"],
       sender: "Askunai Ha'ir <forms@askunaihair.org>",
-      subject: `New Help Request: ${data.firstName} ${data.lastName}, ${data.urgencyLevel}`,
+      subject: `New Help Request: ${data.name}, ${data.urgencyLevel}`,
       html_body: adminHtml,
       text_body: adminText
     });
@@ -137,9 +137,9 @@ Askunai Ha'ir Coordinators
     }
 
     // Send confirmation to applicant
-    if (data.email) {
+    if (data.contactEmail) {
       await sendEmail({
-        to: [data.email],
+        to: [data.contactEmail],
         sender: "Askunai Ha'ir <forms@askunaihair.org>",
         subject: "We Received Your Request",
         html_body: applicantHtml,
