@@ -19,11 +19,27 @@ export function GetHelp() {
   const [submitted, setSubmitted] = useState(false);
   const { register, handleSubmit, formState: { errors } } = useForm<HelpFormData>();
 
-  const onSubmit = (data: HelpFormData) => {
-    console.log('Help request submitted:', data);
+const onSubmit = async (data: ApplicationFormData) => {
+  try {
+    const response = await fetch("/api/gethelp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to submit");
+    }
+
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-  };
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+  } catch (error) {
+    alert("Something went wrong. Please try again.");
+  }
+};
 
   return (
     <div className="flex flex-col">
