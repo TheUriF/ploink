@@ -121,7 +121,7 @@ Askunai Ha'ir Coordinators
     const adminResponse = await sendEmail({
       to: ["applications@askunaihair.org"],
       sender: "forms@askunaihair.org",
-      subject: "New Website Submission",
+      subject: `New Volunteer Application: ${data.firstName} ${data.lastName}`,
       html_body: adminHtml,
       text_body: adminText
     });
@@ -135,7 +135,7 @@ Askunai Ha'ir Coordinators
       await sendEmail({
         to: [data.email],
         sender: "forms@askunaihair.org",
-        subject: "We Received Your Submission",
+        subject: "We Received Your Application",
         html_body: applicantHtml,
         text_body: applicantText
       });
