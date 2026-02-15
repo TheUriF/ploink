@@ -55,8 +55,8 @@ export function Contact() {
               </div>
               <h3 className="font-semibold mb-2">Emergency Hotline</h3>
               <p className="text-sm text-muted-foreground mb-2">24/7 Crisis Support</p>
-              <a href="tel:+18002758624" className="text-[#d4183d] font-semibold">
-                +1-800-ASKUNAI
+              <a href="tel:+18457204040" className="text-[#d4183d] font-semibold">
+                +1 (845) 720-4040
               </a>
             </div>
 
@@ -281,8 +281,8 @@ export function Contact() {
                     <div className="space-y-1 text-sm">
                       <div>
                         <span className="text-muted-foreground">USA: </span>
-                        <a href="tel:+18002758624" className="text-[#9FD36B] hover:underline">
-                          +1-800-ASKUNAI
+                        <a href="tel:+18457204040" className="text-[#9FD36B] hover:underline">
+                          +1 (845) 720-4040
                         </a>
                       </div>
                       <div>
