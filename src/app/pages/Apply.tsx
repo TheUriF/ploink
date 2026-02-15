@@ -23,7 +23,7 @@ export function Apply() {
 
 const onSubmit = async (data: ApplicationFormData) => {
   try {
-    const response = await fetch("/api/contact", {
+    const response = await fetch("/api/application", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
