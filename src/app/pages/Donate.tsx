@@ -201,7 +201,58 @@ export function Donate() {
                 </div>
               </div>
 
-              {/* Submit */}
+              {/* Card Details (Placeholder) */}
+              <div className="mb-8 space-y-4">
+                <div>
+                  <label htmlFor="cardNumber" className="block mb-2">Card Number</label>
+                  <input
+                    id="cardNumber"
+                    type="text"
+                    placeholder="1234 5678 9012 3456"
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-input-background focus:outline-none focus:ring-2 focus:ring-[#6FAF2F]"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="expiry" className="block mb-2">Expiry Date</label>
+                    <input
+                      id="expiry"
+                      type="text"
+                      placeholder="MM/YY"
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-input-background focus:outline-none focus:ring-2 focus:ring-[#6FAF2F]"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="cvv" className="block mb-2">CVV</label>
+                    <input
+                      id="cvv"
+                      type="text"
+                      placeholder="123"
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-input-background focus:outline-none focus:ring-2 focus:ring-[#6FAF2F]"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="name" className="block mb-2">Cardholder Name</label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Full name on card"
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-input-background focus:outline-none focus:ring-2 focus:ring-[#6FAF2F]"
+                  />
+                </div>
+              </div>
+
+              {/* Security Notice */}
+              <div className="bg-muted rounded-lg p-4 mb-8 flex items-start gap-3">
+                <Shield className="h-5 w-5 text-[#6FAF2F] flex-shrink-0 mt-0.5" />
+                <div className="text-sm text-muted-foreground">
+                  <strong className="text-foreground">Secure Payment:</strong> Your donation is processed through encrypted channels. We never store your payment information. All donations are tax-deductible.
+                </div>
+              </div>
+
+              {/* Submit Button */}
+
               <button
                 type="submit"
                 disabled={!donationAmount && !customAmount}
