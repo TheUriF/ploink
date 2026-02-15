@@ -21,11 +21,27 @@ export function Apply() {
   const [submitted, setSubmitted] = useState(false);
   const { register, handleSubmit, formState: { errors } } = useForm<ApplicationFormData>();
 
-  const onSubmit = (data: ApplicationFormData) => {
-    console.log('Application submitted:', data);
+const onSubmit = async (data: ApplicationFormData) => {
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to submit");
+    }
+
     setSubmitted(true);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+  } catch (error) {
+    alert("Something went wrong. Please try again.");
+  }
+};
 
   const skillOptions = [
     'Medical/Healthcare',
