@@ -120,7 +120,7 @@ Askunai Ha'ir Coordinators
     // Send admin notification
     const adminResponse = await sendEmail({
       to: ["applications@askunaihair.org"],
-      sender: "forms@askunaihair.org",
+      sender: "Askunai Ha'ir <forms@askunaihair.org>",
       subject: `New Volunteer Application: ${data.firstName} ${data.lastName}`,
       html_body: adminHtml,
       text_body: adminText
@@ -134,7 +134,7 @@ Askunai Ha'ir Coordinators
     if (data.email) {
       await sendEmail({
         to: [data.email],
-        sender: "forms@askunaihair.org",
+        sender: "Askunai Ha'ir <forms@askunaihair.org>",
         subject: "We Received Your Application",
         html_body: applicantHtml,
         text_body: applicantText
