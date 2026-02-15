@@ -325,9 +325,9 @@ export function Contact() {
                     <div className="text-sm">
                       <div className="font-semibold">Address</div>
                       <div className="text-muted-foreground">
-                        123 Volunteer Way
+                        6 Ronald Tawil Way
                         <br />
-                        New York, NY 10001
+                        Mountaindale, NY 12763
                         <br />
                         United States
                       </div>
@@ -338,8 +338,8 @@ export function Contact() {
                     <Phone className="h-5 w-5 text-[#6FAF2F] flex-shrink-0 mt-0.5" />
                     <div className="text-sm">
                       <div className="font-semibold">Phone</div>
-                      <a href="tel:+12125551234" className="text-[#6FAF2F] hover:underline">
-                        +1 (212) 555-1234
+                      <a href="tel:+18454347724" className="text-[#6FAF2F] hover:underline">
+                        +1 (845) 434-7724
                       </a>
                     </div>
                   </div>
