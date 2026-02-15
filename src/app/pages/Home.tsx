@@ -68,7 +68,7 @@ export function Home() {
     {
       name: 'Avraham Israel',
       role: 'Former Senior Web Developer',
-      quote: 'Working in this organization means putting public safety and PR opportunities first - before your own life or the the lives of those you love',
+      quote: 'Working in this organization means putting public safety and PR opportunities first - before your own life or the the lives of those you love.',
       image: 'volunteer community organizer man',
     },
   ];
