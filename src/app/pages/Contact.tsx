@@ -15,16 +15,9 @@ export function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormData>();
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log('Contact form submitted:', data);
-    setSubmitted(true);
-    reset();
-    setTimeout(() => setSubmitted(false), 5000);
-  };
-
   const onSubmit = async (data: ApplicationFormData) => {
     try {
-      const response = await fetch("/api/application", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
