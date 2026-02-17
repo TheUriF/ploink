@@ -46,7 +46,7 @@ export async function onRequestPost(context) {
     const adminHtml = `
       <div style="font-family:Arial,sans-serif;background:#f4f4f4;padding:30px;">
         <div style="max-width:600px;margin:auto;background:white;padding:25px;border-radius:8px;">
-          <h2 style="margin-top:0;">New Application Submitted</h2>
+          <h2 style="margin-top:0;">New Contact Form Submitted</h2>
           <table style="width:100%;border-collapse:collapse;margin-top:20px;">
             ${formattedFields}
           </table>
@@ -65,18 +65,18 @@ export async function onRequestPost(context) {
       .join("\n");
 
     // ===============================
-    // 2️⃣ APPLICANT CONFIRMATION EMAIL
+    // 2️⃣ FORM CONFIRMATION EMAIL
     // ===============================
 
     const applicantHtml = `
       <div style="font-family:Arial,sans-serif;background:#f4f4f4;padding:30px;">
         <div style="max-width:600px;margin:auto;background:white;padding:25px;border-radius:8px;">
-          <h2 style="margin-top:0;">Thank You for Your Submission</h2>
+          <h2 style="margin-top:0;">Thank You for Your Message</h2>
 
-          <p>Hi ${escapeHtml(data.firstName || "")},</p>
+          <p>Hi ${escapeHtml(data.name || "")},</p>
 
           <p>
-            We’ve received your submission and will review it shortly.
+            We’ve received your message and will review it shortly.
           </p>
 
           <p>
@@ -92,9 +92,9 @@ export async function onRequestPost(context) {
     `;
 
     const applicantText = `
-Hi ${data.firstName || ""},
+Hi ${data.name || ""},
 
-We’ve received your submission and will review it shortly.
+We’ve received your message and will review it shortly.
 
 If we need anything else, we’ll contact you.
 
@@ -119,9 +119,9 @@ Askunai Ha'ir Coordinators
 
     // Send admin notification
     const adminResponse = await sendEmail({
-      to: ["applications@askunaihair.org"],
+      to: ["info@askunaihair.org"],
       sender: "Askunai Ha'ir <forms@askunaihair.org>",
-      subject: `New Volunteer Application: ${data.firstName} ${data.lastName}`,
+      subject: `Contact Form Submitted: ${data.name}`,
       html_body: adminHtml,
       text_body: adminText
     });
@@ -135,7 +135,7 @@ Askunai Ha'ir Coordinators
       await sendEmail({
         to: [data.email],
         sender: "Askunai Ha'ir <forms@askunaihair.org>",
-        subject: "We Received Your Application",
+        subject: "We Received Your Message",
         html_body: applicantHtml,
         text_body: applicantText
       });
