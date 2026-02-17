@@ -22,28 +22,28 @@ export function Contact() {
     setTimeout(() => setSubmitted(false), 5000);
   };
 
-const onSubmit = async (data: ApplicationFormData) => {
-  try {
-    const response = await fetch("/api/application", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+  const onSubmit = async (data: ApplicationFormData) => {
+    try {
+      const response = await fetch("/api/application", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    if (!response.ok) {
-      throw new Error("Failed to submit");
+      if (!response.ok) {
+        throw new Error("Failed to submit");
+      }
+
+      setSubmitted(true);
+      reset();
+      setTimeout(() => setSubmitted(false), 5000);
+
+    } catch (error) {
+      alert("Something went wrong. Please try again.");
     }
-
-    setSubmitted(true);
-    reset();
-    setTimeout(() => setSubmitted(false), 5000);
-
-  } catch (error) {
-    alert("Something went wrong. Please try again.");
-  }
-};
+  };
 
   return (
     <div className="flex flex-col">
