@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.webp';
 
 export function Footer() {
   return (
