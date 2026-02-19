@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "Askunai Ha'ir",
+    "slug": "askunai-hair-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "org.askunaihair.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF"
+      }
+    }
+  }
+}
