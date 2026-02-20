@@ -116,7 +116,7 @@ const onSubmit = async (data: ApplicationFormData) => {
                 <h3 className="text-base sm:text-lg md:text-xl">Average Response Time</h3>
               </div>
               <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
-                Our coordinators typically respond within 5-15 minutes. Volunteers can be deployed within hours.
+                Our coordinators typically respond within 5-15 minutes. Volunteers can be deployed within hours if there's no other hock.
               </p>
               <div className="text-sm font-semibold text-[#6FAF2F]">We work at the speed of urgency</div>
             </div>
