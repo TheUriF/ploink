@@ -225,13 +225,18 @@ const onSubmit = async (data: ApplicationFormData) => {
                   className="w-full px-4 py-3 rounded-lg border border-border bg-input-background focus:outline-none focus:ring-2 focus:ring-[#6FAF2F] text-base touch-manipulation"
                 >
                   <option value="">Select emergency type...</option>
+                  <option value="boost">Boost</option>
+                  <option value="tire">Flat Tire</option>
+                  <option value="transport">Transport</option>
                   <option value="medical">Medical Emergency</option>
                   <option value="disaster">Natural Disaster</option>
+                  <option value="rescue">Search & Rescue</option>
+                  <option value="fire">Fire</option>
                   <option value="family">Family Crisis</option>
                   <option value="financial">Financial Hardship</option>
-                  <option value="housing">Housing/Shelter</option>
                   <option value="mental-health">Mental Health Support</option>
                   <option value="community">Community Emergency</option>
+                  <option value="security">Security</option>
                   <option value="other">Other</option>
                 </select>
                 {errors.emergencyType && <p className="text-[#d4183d] text-sm mt-1">{errors.emergencyType.message}</p>}
