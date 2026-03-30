@@ -21,9 +21,7 @@ export async function onRequestPost(context) {
         if (Array.isArray(value)) {
           value = value.join(", ");
         }
-
         const safeValue = escapeHtml(value).replace(/\n/g, "<br>");
-
         return `
           <tr>
             <td style="padding:10px;border:1px solid #eee;font-weight:600;background:#f9f9f9;width:40%;vertical-align:top;">
@@ -40,9 +38,31 @@ export async function onRequestPost(context) {
     const timestamp = new Date().toLocaleString();
 
     // ===============================
-    // 1️⃣ ADMIN EMAIL
+    // 1️⃣ CREATE CALL IN APP (FIRESTORE)
     // ===============================
+    try {
+      // REPLACE THIS URL with your actual deployed Firebase Function URL
+      const FIREBASE_FUNCTION_URL = "https://us-central1-your-project-id.cloudfunctions.net/createCallFromWebsite";
+      
+      await fetch(FIREBASE_FUNCTION_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          phone: data.phone,
+          address: data.address,
+          urgencyLevel: data.urgencyLevel,
+          message: data.message
+        })
+      });
+    } catch (firebaseErr) {
+      console.error("Firebase call creation failed:", firebaseErr);
+      // We continue even if this fails so the emails still go out
+    }
 
+    // ===============================
+    // 2️⃣ ADMIN EMAIL
+    // ===============================
     const adminHtml = `
       <div style="font-family:Arial,sans-serif;background:#f4f4f4;padding:30px;">
         <div style="max-width:600px;margin:auto;background:white;padding:25px;border-radius:8px;">
@@ -65,53 +85,25 @@ export async function onRequestPost(context) {
       .join("\n");
 
     // ===============================
-    // 2️⃣ REQUEST CONFIRMATION EMAIL
+    // 3️⃣ REQUEST CONFIRMATION EMAIL
     // ===============================
-
     const applicantHtml = `
       <div style="font-family:Arial,sans-serif;background:#f4f4f4;padding:30px;">
         <div style="max-width:600px;margin:auto;background:white;padding:25px;border-radius:8px;">
           <h2 style="margin-top:0;">We Received Your Request</h2>
-
           <p>Hi ${escapeHtml(data.name || "")},</p>
-
-          <p>
-            We’ve received your request and will reach out shortly.
-          </p>
-
-          <p>
-            If this is an emergency, please call 911.
-          </p>
-
-          <p>
-            If we need any additional information, we’ll reach out to you at this email address.
-          </p>
-
-          <p style="margin-top:30px;">
-            Best regards,<br/>
-            Askunai Ha'ir Coordinators
-          </p>
+          <p>We’ve received your request and will reach out shortly.</p>
+          <p>If this is an emergency, please call 911.</p>
+          <p>If we need any additional information, we’ll reach out to you at this email address.</p>
+          <p style="margin-top:30px;">Best regards,<br/>Askunai Ha'ir Coordinators</p>
         </div>
       </div>
     `;
 
-    const applicantText = `
-Hi ${data.name || ""},
-
-We’ve received your request and will respond shortly.
-
-If this is an emergency, please call 911.
-
-If we need anything else, we’ll contact you.
-
-Best regards,
-Askunai Ha'ir Coordinators
-`;
-
+    const applicantText = `Hi ${data.name || ""},\n\nWe’ve received your request and will respond shortly.\n\nIf this is an emergency, please call 911.\n\nIf we need anything else, we’ll contact you.\n\nBest regards,\nAskunai Ha'ir Coordinators`;
     // ===============================
     // SEND BOTH EMAILS
     // ===============================
-
     const sendEmail = async (emailPayload) => {
       return fetch("https://api.smtp2go.com/v3/email/send", {
         method: "POST",
@@ -123,7 +115,8 @@ Askunai Ha'ir Coordinators
       });
     };
 
-    // Send admin notification
+      // Send admin notification
+
     const adminResponse = await sendEmail({
       to: ["dispatch@askunaihair.org"],
       sender: "Askunai Ha'ir <forms@askunaihair.org>",
@@ -136,7 +129,8 @@ Askunai Ha'ir Coordinators
       return new Response("Admin email failed", { status: 500 });
     }
 
-    // Send confirmation to applicant
+      // Send confirmation to applicant
+
     if (data.contactEmail) {
       await sendEmail({
         to: [data.contactEmail],
