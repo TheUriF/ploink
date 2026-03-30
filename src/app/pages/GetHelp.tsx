@@ -187,14 +187,14 @@ const onSubmit = async (data: ApplicationFormData) => {
               <div className="grid sm:grid-cols-2 gap-4 sm:gap-4">
                 <div>
                   <label htmlFor="location" className="block mb-2 text-sm sm:text-base">
-                    City/Region <span className="text-[#d4183d]">*</span>
+                    Location <span className="text-[#d4183d]">*</span>
                   </label>
                   <input
                     id="location"
                     type="text"
                     {...register('location', { required: 'Location is required' })}
                     className="w-full px-4 py-3 rounded-lg border border-border bg-input-background focus:outline-none focus:ring-2 focus:ring-[#6FAF2F] text-base touch-manipulation"
-                    placeholder="City or region"
+                    placeholder="Location"
                   />
                   {errors.location && <p className="text-[#d4183d] text-sm mt-1">{errors.location.message}</p>}
                 </div>
