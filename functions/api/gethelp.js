@@ -46,13 +46,7 @@ export async function onRequestPost(context) {
       await fetch(FIREBASE_FUNCTION_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: data.name,
-          phone: data.phone,
-          address: data.address,
-          urgencyLevel: data.urgencyLevel,
-          message: data.message
-        })
+        body: JSON.stringify(data)
       });
     } catch (firebaseErr) {
       console.error("Firebase call creation failed:", firebaseErr);
