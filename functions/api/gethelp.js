@@ -41,8 +41,7 @@ export async function onRequestPost(context) {
     // 1️⃣ CREATE CALL IN APP (FIRESTORE)
     // ===============================
     try {
-      // REPLACE THIS URL with your actual deployed Firebase Function URL
-      const FIREBASE_FUNCTION_URL = "https://us-central1-your-project-id.cloudfunctions.net/createCallFromWebsite";
+      const FIREBASE_FUNCTION_URL = "https://us-central1-askunai-volunteer.cloudfunctions.net/createCallFromWebsite";
       
       await fetch(FIREBASE_FUNCTION_URL, {
         method: "POST",
