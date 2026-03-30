@@ -45,7 +45,9 @@ export async function onRequestPost(context) {
       
       await fetch(FIREBASE_FUNCTION_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json",
+                 "x-api-key": context.env.WEBSITE_API_KEY
+        },
         body: JSON.stringify(data)
       });
     } catch (firebaseErr) {
