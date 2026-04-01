@@ -304,6 +304,7 @@ const onSubmit = async (data: ApplicationFormData) => {
                   <option value="">Select language...</option>
                   <option value="english">English</option>
                   <option value="hebrew">Hebrew</option>
+                  <option value="yiddish">Yiddish</option>
                   <option value="spanish">Spanish</option>
                   <option value="french">French</option>
                   <option value="german">German</option>
