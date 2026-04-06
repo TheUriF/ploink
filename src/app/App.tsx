@@ -1,14 +1,12 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from 'next-themes';
 import { Header } from '@/app/components/Header';
 import { Footer } from '@/app/components/Footer';
 import { EmergencyButton } from '@/app/components/EmergencyButton';
 import { Home } from '@/app/pages/Home';
 import { About } from '@/app/pages/About';
-import { WhatWeDo } from '@/app/pages/WhatWeDo';
 import { GetHelp } from '@/app/pages/GetHelp';
 import { Apply } from '@/app/pages/Apply';
-import { GlobalOperations } from '@/app/pages/GlobalOperations';
 import { Donate } from '@/app/pages/Donate';
 import { News } from '@/app/pages/News';
 import { Contact } from '@/app/pages/Contact';
@@ -24,10 +22,10 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/what-we-do" element={<WhatWeDo />} />
+              <Route path="/what-we-do" element={<Navigate to="/about" replace />} />
               <Route path="/get-help" element={<GetHelp />} />
               <Route path="/apply" element={<Apply />} />
-              <Route path="/global-operations" element={<GlobalOperations />} />
+              <Route path="/global-operations" element={<Navigate to="/about" replace />} />
               <Route path="/donate" element={<Donate />} />
               <Route path="/news" element={<News />} />
               <Route path="/contact" element={<Contact />} />

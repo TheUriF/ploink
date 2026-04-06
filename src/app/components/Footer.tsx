@@ -80,12 +80,7 @@ export function Footer() {
               </li>
               <li>
                 <Link to="/what-we-do" className="text-muted-foreground hover:text-foreground active:text-foreground transition-colors">
-                  What We Do
-                </Link>
-              </li>
-              <li>
-                <Link to="/global-operations" className="text-muted-foreground hover:text-foreground active:text-foreground transition-colors">
-                  Global Operations
+                  About Our Work
                 </Link>
               </li>
               <li>
