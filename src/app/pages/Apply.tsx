@@ -287,7 +287,7 @@ const onSubmit = async (data: ApplicationFormData) => {
                 </div>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit(onSubmit)} className="bg-background rounded-xl border border-border p-8 space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="bg-background rounded-xl border border-border p-5 sm:p-8 space-y-6">
                 {/* Personal Information */}
                 <div>
                   <h3 className="text-xl sm:text-2xl mb-3 sm:mb-4 flex items-center gap-2">
@@ -353,7 +353,7 @@ const onSubmit = async (data: ApplicationFormData) => {
                         id="phone"
                         type="tel"
                         {...register('phone', { required: 'Phone number is required' })}
-                        className="w-full x-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border bg-input-background focus:outline-none focus:ring-2 focus:ring-[#6FAF2F]"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-border bg-input-background focus:outline-none focus:ring-2 focus:ring-[#6FAF2F]"
                         placeholder=" +18454347724"
                       />
                       {errors.phone && <p className="text-[#d4183d] text-sm mt-1">{errors.phone.message}</p>}
@@ -419,14 +419,17 @@ const onSubmit = async (data: ApplicationFormData) => {
                     <p className="text-sm text-muted-foreground mb-3">Select all that apply</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                       {skillOptions.map((skill) => (
-                        <label key={skill} className="flex items-center gap-2 cursor-pointer">
+                        <label
+                          key={skill}
+                          className="flex items-start gap-3 rounded-lg border border-border bg-background p-3 sm:p-3.5 cursor-pointer transition-colors hover:bg-muted/60"
+                        >
                           <input
                             type="checkbox"
                             value={skill}
                             {...register('skills', { required: 'Please select at least one skill' })}
-                            className="h-4 w-4 sm:h-5 sm:w-5 text-[#6FAF2F] rounded border-border focus:ring-2 focus:ring-[#6FAF2F]"
+                            className="mt-0.5 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-[#6FAF2F] rounded border-border focus:ring-2 focus:ring-[#6FAF2F]"
                           />
-                          <span className="text-sm">{skill}</span>
+                          <span className="text-sm sm:text-base leading-snug">{skill}</span>
                         </label>
                       ))}
                     </div>

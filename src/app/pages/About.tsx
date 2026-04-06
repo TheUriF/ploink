@@ -1,5 +1,35 @@
 import { motion } from 'motion/react';
-import { Globe, Users, Award, Eye, Target, Scale } from 'lucide-react';
+import { Globe, Users, Award, Eye, Target, Scale, Phone, Shield, Package } from 'lucide-react';
+
+const serviceAreas = [
+  {
+    title: 'Crisis Dispatch',
+    description: '24/7 triage and routing so urgent calls quickly reach the right regional responders.',
+    icon: Phone,
+    color: 'text-[#6FAF2F]',
+  },
+  {
+    title: 'Medical & Safety Support',
+    description: 'Coordination with trained volunteers, clinicians, and local emergency partners.',
+    icon: Shield,
+    color: 'text-[#4A86C5]',
+  },
+  {
+    title: 'Family & Community Aid',
+    description: 'Practical support such as supplies, transportation, and continuity care for families.',
+    icon: Package,
+    color: 'text-[#9FD36B]',
+  },
+];
+
+const regionalCoverage = [
+  { region: 'North America', volunteers: '1,300', languages: 'English, Spanish, French' },
+  { region: 'Europe', volunteers: '640', languages: 'English, French, German, Russian, Italian' },
+  { region: 'Middle East', volunteers: '709', languages: 'Hebrew, Arabic, English' },
+  { region: 'Asia Pacific', volunteers: '300', languages: 'English, Mandarin, Japanese, Hindi' },
+  { region: 'Latin America', volunteers: '205', languages: 'Spanish, Portuguese, English' },
+  { region: 'Africa', volunteers: '46', languages: 'English, French, Swahili, Arabic' },
+];
 
 export function About() {
   return (
@@ -20,244 +50,132 @@ export function About() {
             transition={{ delay: 0.1 }}
             className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto"
           >
-            We are a global network of dedicated volunteers united by one mission: coordinate help when it matters most.
+            One unified overview of who we are, what we do, and how our global operations are coordinated.
           </motion.p>
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Mission + Story */}
       <section className="py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6 text-center">Our Story</h2>
-            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-muted-foreground">
-              <p>
-                Askunai Ha'ir was founded by Sruly Pfeiffer on a simple yet powerful belief: in moments of crisis, coordinated action saves lives. What began as a small group of community organizers responding to local emergencies has grown into a global humanitarian network spanning 87 countries.
+          <div className="max-w-4xl mx-auto space-y-8 sm:space-y-10">
+            <div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6 text-center">Our Mission</h2>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                Askunai Ha'ir exists to coordinate fast, compassionate humanitarian response in moments of crisis.
+                We connect people in urgent need with trained volunteers, local partners, and practical resources.
               </p>
-              <p>
-                The name "Askunai Ha'ir" translates to "community activists," a title that captures the essence of our mission. We are askunim: community coordinators, organizers, and first responders who dedicate ourselves to serving others.
-              </p>
-              <p>
-                Today, our network includes over 3,000 trained volunteers ready to respond at a moment's notice. From natural disasters to medical emergencies, from family crises to community-wide challenges, we coordinate resources, deploy volunteers, and provide critical support when communities need it most.
-              </p>
-              <p>
-                Our strength lies not in any single individual, but in our coordinated network. When crisis strikes anywhere in the world, our askunim activate a web of resources, expertise, and compassionate action that can make the difference between tragedy and hope.
+            </div>
+
+            <div className="bg-muted rounded-xl p-5 sm:p-8 border border-border">
+              <div className="flex items-center gap-3 mb-4">
+                <Users className="h-6 w-6 text-[#6FAF2F]" />
+                <h3 className="text-xl sm:text-2xl">Our Story</h3>
+              </div>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                What started as local volunteer coordination has grown into a global network spanning dozens of
+                countries. Our model combines local decision-making with shared response standards so each region can
+                act quickly while remaining connected to the larger mission.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Role of Askanim */}
+      {/* What We Do */}
       <section className="py-12 sm:py-16 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#6FAF2F] rounded-full flex items-center justify-center">
-                <Users className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-              </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl">The Role of Askunim</h2>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl mb-3 sm:mb-4">What We Do</h2>
+              <p className="text-base sm:text-lg text-muted-foreground">
+                Three core service domains guide every response.
+              </p>
             </div>
 
-            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-muted-foreground">
-              <p>
-                An <span className="text-foreground font-semibold">askan</span> (plural: askunim) is more than a volunteer — they are community coordinators who take personal responsibility for ensuring help reaches those who need it. Askunim serve as the vital link between crisis and response.
-              </p>
-
-              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 my-6 sm:my-8">
-                <div className="bg-background rounded-xl p-4 sm:p-6 border border-border">
-                  <h3 className="text-[#6FAF2F] mb-2 sm:mb-3 text-base sm:text-lg">24/7 Coordination</h3>
-                  <p className="text-sm sm:text-base">Askunim maintain round-the-clock availability to receive emergency calls and coordinate immediate response.</p>
-                </div>
-                <div className="bg-background rounded-xl p-4 sm:p-6 border border-border">
-                  <h3 className="text-[#4A86C5] mb-2 sm:mb-3 text-base sm:text-lg">Resource Mobilization</h3>
-                  <p className="text-sm sm:text-base">They activate networks of volunteers, supplies, and services tailored to each unique situation.</p>
-                </div>
-                <div className="bg-background rounded-xl p-4 sm:p-6 border border-border">
-                  <h3 className="text-[#9FD36B] mb-2 sm:mb-3 text-base sm:text-lg">Local Expertise</h3>
-                  <p className="text-sm sm:text-base">Operating within their communities, askunim understand local needs, customs, and resources intimately.</p>
-                </div>
-                <div className="bg-background rounded-xl p-4 sm:p-6 border border-border">
-                  <h3 className="text-[#6FAF2F] mb-2 sm:mb-3 text-base sm:text-lg">Compassionate Leadership</h3>
-                  <p className="text-sm sm:text-base">Beyond logistics, askunim provide emotional support and guidance during the most difficult moments.</p>
-                </div>
-              </div>
-
-              <p>
-                Our askunim come from all walks of life — medical professionals, logistics experts, counselors, emergency responders, and community leaders. What unites them is an unwavering commitment to service and the skills to coordinate effective, compassionate responses under pressure.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+              {serviceAreas.map((service) => {
+                const Icon = service.icon;
+                return (
+                  <article key={service.title} className="bg-background rounded-xl p-5 sm:p-6 border border-border h-full">
+                    <Icon className={`h-7 w-7 sm:h-8 sm:w-8 mb-3 ${service.color}`} />
+                    <h3 className="text-lg sm:text-xl mb-2">{service.title}</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">{service.description}</p>
+                  </article>
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Global Leadership Model */}
+      {/* Global Operations */}
       <section className="py-12 sm:py-16 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10">
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#4A86C5] rounded-full flex items-center justify-center">
                 <Globe className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl">Global Leadership Model</h2>
+              <div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl">Global Operations</h2>
+                <p className="text-sm sm:text-base text-muted-foreground">Regional coverage and language readiness</p>
+              </div>
             </div>
 
-            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-muted-foreground">
-              <p>
-                Askunai Ha'ir operates through a decentralized yet highly coordinated leadership structure. Our dual headquarters in the United States and Israel serve as coordination hubs, but real decision-making power resides with regional coordinators who understand their communities' unique needs.
-              </p>
-
-              <div className="bg-background rounded-xl p-4 sm:p-6 md:p-8 border border-border my-6 sm:my-8">
-                <h3 className="text-xl sm:text-2xl text-foreground mb-4 sm:mb-6">Our Leadership Structure</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#6FAF2F]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                      <Award className="h-6 w-6 text-[#6FAF2F]" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-foreground mb-1">Global Coordination Council</div>
-                      <div>Oversees strategy, training standards, and cross-border operations</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#4A86C5]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                      <Globe className="h-6 w-6 text-[#4A86C5]" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-foreground mb-1">Regional Directors</div>
-                      <div>Lead operations across continents and major geographic regions</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#9FD36B]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                      <Users className="h-6 w-6 text-[#9FD36B]" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-foreground mb-1">Community Coordinators</div>
-                      <div>Askunim on the ground managing local volunteer networks and responses</div>
-                    </div>
-                  </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {regionalCoverage.map((region) => (
+                <div key={region.region} className="rounded-xl border border-border bg-background p-4 sm:p-5">
+                  <h3 className="text-lg sm:text-xl mb-2">{region.region}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-2">
+                    <span className="font-semibold text-foreground">Volunteers:</span> {region.volunteers}
+                  </p>
+                  <p className="text-sm sm:text-base text-muted-foreground">
+                    <span className="font-semibold text-foreground">Languages:</span> {region.languages}
+                  </p>
                 </div>
-              </div>
-
-              <p>
-                This structure ensures rapid, locally-appropriate responses while maintaining consistency in training, ethics, and coordination standards across our global network.
-              </p>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Ethics & Accountability */}
+      {/* Governance + Transparency */}
       <section className="py-12 sm:py-16 md:py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#6FAF2F] rounded-full flex items-center justify-center">
-                <Scale className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-5 sm:gap-6">
+            <div className="bg-background rounded-xl p-5 sm:p-6 border border-border">
+              <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                <Award className="h-6 w-6 text-[#6FAF2F]" />
+                <h3 className="text-xl sm:text-2xl">Leadership Model</h3>
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl">Ethics & Accountability</h2>
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                A global coordination council aligns standards, while regional coordinators lead operations closest to
+                communities in need.
+              </p>
             </div>
 
-            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-muted-foreground">
-              <p>
-                Trust is the foundation of effective humanitarian work. We hold ourselves to the highest ethical standards and maintain rigorous accountability measures at every level of our organization.
-              </p>
-
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 my-6 sm:my-8">
-                <div className="bg-background rounded-xl p-4 sm:p-6 border border-border">
-                  <div className="text-lg sm:text-xl md:text-2xl text-[#6FAF2F] mb-2 sm:mb-3">Dignity First</div>
-                  <p className="text-sm sm:text-base">Every person we serve is treated with respect, privacy, and compassion regardless of background or circumstance.</p>
-                </div>
-                <div className="bg-background rounded-xl p-4 sm:p-6 border border-border">
-                  <div className="text-lg sm:text-xl md:text-2xl text-[#4A86C5] mb-2 sm:mb-3">Non-Partisan</div>
-                  <p className="text-sm sm:text-base">We provide aid based solely on need, never on political affiliation, religious background, or other criteria.</p>
-                </div>
-                <div className="bg-background rounded-xl p-4 sm:p-6 border border-border">
-                  <div className="text-lg sm:text-xl md:text-2xl text-[#9FD36B] mb-2 sm:mb-3">Financial Integrity</div>
-                  <p className="text-sm sm:text-base">All donations are tracked, audited, and used exclusively for their stated humanitarian purposes or for coordinators' whims. And merch.</p>
-                </div>
+            <div className="bg-background rounded-xl p-5 sm:p-6 border border-border">
+              <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                <Scale className="h-6 w-6 text-[#4A86C5]" />
+                <h3 className="text-xl sm:text-2xl">Ethics & Accountability</h3>
               </div>
-
-              <p>
-                Our volunteer coordinators undergo comprehensive background checks and regular ethics training. We maintain an independent oversight board and publish annual transparency reports detailing our operations, finances, and impact metrics.
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                We prioritize dignity, privacy, and safety while maintaining transparent operations and oversight.
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Transparency Statement */}
-      <section className="py-12 sm:py-16 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#4A86C5] rounded-full flex items-center justify-center">
-                <Eye className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-              </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl">Our Commitment to Transparency</h2>
+          <div className="max-w-5xl mx-auto mt-5 sm:mt-6 bg-background rounded-xl p-5 sm:p-6 border border-border">
+            <div className="flex items-center gap-3 mb-3 sm:mb-4">
+              <Eye className="h-6 w-6 text-[#9FD36B]" />
+              <h3 className="text-xl sm:text-2xl">Transparency</h3>
+              <Target className="h-6 w-6 text-[#6FAF2F]" />
             </div>
-
-            <div className="bg-gradient-to-br from-[#6FAF2F]/5 to-[#4A86C5]/5 rounded-xl p-4 sm:p-6 md:p-8 border border-border">
-              <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-muted-foreground">
-                <p>
-                  Transparency is not just a policy for us — it's a core value. We believe that those who support our mission deserve complete visibility into how their contributions create impact.
-                </p>
-
-                <div className="bg-background rounded-lg p-4 sm:p-6">
-                  <h3 className="text-foreground text-lg sm:text-xl mb-3 sm:mb-4">We Publicly Share:</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-[#6FAF2F] rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Annual financial statements audited by independent third parties</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-[#6FAF2F] rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Detailed impact reports showing how donations are used</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-[#6FAF2F] rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Leadership and governance structure</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-[#6FAF2F] rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Response metrics and operational statistics</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-[#6FAF2F] rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Volunteer training standards and certification requirements</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <p className="text-foreground font-semibold">
-                  Questions about our operations? We welcome them. Contact our transparency team at transparency@askunaihair.org
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-[#6FAF2F] to-[#4A86C5] text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-8 sm:mb-12">
-              <Target className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-4 sm:mb-6" />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6">Our Mission</h2>
-              <p className="text-base sm:text-lg md:text-xl opacity-95">
-                To coordinate rapid, compassionate humanitarian responses by mobilizing skilled volunteers and resources to communities in crisis, ensuring that help arrives when and where it's needed most.
-              </p>
-            </div>
-
-            <div className="border-t border-white/20 pt-8 sm:pt-12">
-              <Eye className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-4 sm:mb-6" />
-              <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6">Our Vision</h2>
-              <p className="text-base sm:text-lg md:text-xl opacity-95">
-                A world where no person faces crisis alone — where coordinated networks of volunteers stand ready to respond with compassion, expertise, and unwavering commitment to human dignity.
-              </p>
-            </div>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+              We share impact reporting, financial visibility, and operational standards so supporters understand how
+              resources are used and where they make the greatest difference.
+            </p>
           </div>
         </div>
       </section>
