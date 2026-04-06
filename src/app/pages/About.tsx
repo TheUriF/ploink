@@ -121,9 +121,13 @@ export function About() {
                 <h3 className="text-xl sm:text-2xl">Our Story</h3>
               </div>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                What started as local volunteer coordination has grown into a global network spanning dozens of
-                countries. Our model combines local decision-making with shared response standards so each region can
-                act quickly while remaining connected to the larger mission.
+                Askunai Ha'ir was founded by Sruly Pfeiffer on a simple yet powerful belief: in moments of crisis, coordinated action saves lives. What began as a small group of community organizers responding to local emergencies has grown into a global humanitarian network spanning 87 countries.
+
+The name "Askunai Ha'ir" translates to "community activists," a title that captures the essence of our mission. We are askunim: community coordinators, organizers, and first responders who dedicate ourselves to serving others.
+
+Today, our network includes over 3,000 trained volunteers ready to respond at a moment's notice. From natural disasters to medical emergencies, from family crises to community-wide challenges, we coordinate resources, deploy volunteers, and provide critical support when communities need it most.
+
+Our strength lies not in any single individual, but in our coordinated network. When crisis strikes anywhere in the world, our askunim activate a web of resources, expertise, and compassionate action that can make the difference between tragedy and hope.
               </p>
             </div>
           </div>
