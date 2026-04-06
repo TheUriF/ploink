@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Globe, Users, Award, Eye, Target, Scale, Phone, Shield, Package } from 'lucide-react';
+import { Globe, Users, Award, Eye, Target, Scale, Phone, Shield, Package, Activity, MapPin } from 'lucide-react';
 
 const serviceAreas = [
   {
@@ -22,16 +23,63 @@ const serviceAreas = [
   },
 ];
 
-const regionalCoverage = [
-  { region: 'North America', volunteers: '1,300', languages: 'English, Spanish, French' },
-  { region: 'Europe', volunteers: '640', languages: 'English, French, German, Russian, Italian' },
-  { region: 'Middle East', volunteers: '709', languages: 'Hebrew, Arabic, English' },
-  { region: 'Asia Pacific', volunteers: '300', languages: 'English, Mandarin, Japanese, Hindi' },
-  { region: 'Latin America', volunteers: '205', languages: 'Spanish, Portuguese, English' },
-  { region: 'Africa', volunteers: '46', languages: 'English, French, Swahili, Arabic' },
+interface Region {
+  name: string;
+  coordinator: string;
+  volunteers: number;
+  languages: string[];
+  activeOps: number;
+}
+
+const regions: Region[] = [
+  {
+    name: 'North America',
+    coordinator: 'Michel Chavez',
+    volunteers: 1300,
+    languages: ['English', 'Spanish', 'French'],
+    activeOps: 39,
+  },
+  {
+    name: 'Europe',
+    coordinator: 'Sarah Levine',
+    volunteers: 640,
+    languages: ['English', 'French', 'German', 'Russian', 'Italian'],
+    activeOps: 21,
+  },
+  {
+    name: 'Middle East',
+    coordinator: 'David Ben-Ami',
+    volunteers: 709,
+    languages: ['Hebrew', 'Arabic', 'English'],
+    activeOps: 23,
+  },
+  {
+    name: 'Asia Pacific',
+    coordinator: 'Dr. Rachel Chen',
+    volunteers: 300,
+    languages: ['English', 'Mandarin', 'Japanese', 'Hindi'],
+    activeOps: 14,
+  },
+  {
+    name: 'Latin America',
+    coordinator: 'Carlos Martinez',
+    volunteers: 205,
+    languages: ['Spanish', 'Portuguese', 'English'],
+    activeOps: 7,
+  },
+  {
+    name: 'Africa',
+    coordinator: 'Dr. Miriam Adeyemi',
+    volunteers: 46,
+    languages: ['English', 'French', 'Swahili', 'Arabic'],
+    activeOps: 3,
+  },
 ];
 
 export function About() {
+  const [selectedRegion, setSelectedRegion] = useState<Region>(regions[0]);
+  const maxVolunteers = Math.max(...regions.map((region) => region.volunteers));
+
   return (
     <div className="flex flex-col">
       {/* Hero */}
@@ -123,18 +171,75 @@ export function About() {
               </div>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {regionalCoverage.map((region) => (
-                <div key={region.region} className="rounded-xl border border-border bg-background p-4 sm:p-5">
-                  <h3 className="text-lg sm:text-xl mb-2">{region.region}</h3>
-                  <p className="text-sm sm:text-base text-muted-foreground mb-2">
-                    <span className="font-semibold text-foreground">Volunteers:</span> {region.volunteers}
-                  </p>
-                  <p className="text-sm sm:text-base text-muted-foreground">
-                    <span className="font-semibold text-foreground">Languages:</span> {region.languages}
-                  </p>
+            <div className="grid lg:grid-cols-3 gap-4 sm:gap-6">
+              <div className="lg:col-span-1 space-y-2 sm:space-y-3">
+                {regions.map((region) => (
+                  <button
+                    key={region.name}
+                    onClick={() => setSelectedRegion(region)}
+                    className={`w-full text-left rounded-xl border p-3 sm:p-4 transition-all ${
+                      selectedRegion.name === region.name
+                        ? 'bg-[#6FAF2F] text-white border-[#6FAF2F] shadow-md'
+                        : 'bg-background border-border hover:border-[#6FAF2F]'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <MapPin className="h-4 w-4 sm:h-5 sm:w-5" />
+                      <div className="flex-1">
+                        <div className="font-semibold text-sm sm:text-base">{region.name}</div>
+                        <div className={`text-xs sm:text-sm ${selectedRegion.name === region.name ? 'text-white/85' : 'text-muted-foreground'}`}>
+                          {region.volunteers.toLocaleString()} volunteers
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+
+              <div className="lg:col-span-2 rounded-xl border border-border bg-background p-4 sm:p-6">
+                <div className="flex items-start justify-between gap-4 mb-4 sm:mb-6">
+                  <div>
+                    <h3 className="text-xl sm:text-2xl">{selectedRegion.name}</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground mt-1">
+                      Regional coordinator: {selectedRegion.coordinator}
+                    </p>
+                  </div>
+                  <div className="inline-flex items-center gap-2 rounded-lg bg-[#6FAF2F]/10 text-[#6FAF2F] px-3 py-1.5 text-xs sm:text-sm font-semibold">
+                    <Activity className="h-4 w-4 animate-pulse" />
+                    {selectedRegion.activeOps} active ops
+                  </div>
                 </div>
-              ))}
+
+                <div className="space-y-3 mb-5 sm:mb-6">
+                  {regions.map((region) => (
+                    <div key={region.name}>
+                      <div className="flex items-center justify-between text-xs sm:text-sm mb-1.5">
+                        <span className="text-muted-foreground">{region.name}</span>
+                        <span className="font-medium">{region.volunteers.toLocaleString()}</span>
+                      </div>
+                      <div className="h-2.5 rounded-full bg-muted overflow-hidden">
+                        <div
+                          className={`h-full rounded-full transition-all ${
+                            region.name === selectedRegion.name ? 'bg-[#6FAF2F]' : 'bg-[#4A86C5]/70'
+                          }`}
+                          style={{ width: `${(region.volunteers / maxVolunteers) * 100}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div>
+                  <div className="text-sm sm:text-base font-semibold mb-2">Language support</div>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedRegion.languages.map((language) => (
+                      <span key={language} className="px-2.5 py-1 rounded-full bg-muted text-xs sm:text-sm">
+                        {language}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
