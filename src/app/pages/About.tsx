@@ -126,7 +126,7 @@ export function About() {
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
 The name "Askunai Ha'ir" translates to "community activists," a title that captures the essence of our mission. We are askunim: community coordinators, organizers, and first responders who dedicate ourselves to serving others.
               </p>
-              <p>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
 Today, our network includes over 3,000 trained volunteers ready to respond at a moment's notice. From natural disasters to medical emergencies, from family crises to community-wide challenges, we coordinate resources, deploy volunteers, and provide critical support when communities need it most.
               </p>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
