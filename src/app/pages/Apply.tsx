@@ -424,7 +424,7 @@ const onSubmit = async (data: ApplicationFormData) => {
                             type="checkbox"
                             value={skill}
                             {...register('skills', { required: 'Please select at least one skill' })}
-                            className="h-4 w-4 sm:h-5 sm:w-5 text-[#6FAF2F] rounded border-border focus:ring-2 focus:ring-[#6FAF2F]"
+                            className="h-3.5 w-3.5 sm:h-5 sm:w-5 text-[#6FAF2F] rounded border-border focus:ring-2 focus:ring-[#6FAF2F]"
                           />
                           <span className="text-sm">{skill}</span>
                         </label>
